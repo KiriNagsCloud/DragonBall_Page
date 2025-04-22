@@ -1,12 +1,20 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ExFixacaoAPI
+1 - Mobile first
+2 - 2 Paths(Página)
+3 - Renderização condicional ex{variavel && } ou {vari ? <html> : " "} condicional
+4 - Consumir API DragonBall (C/ filtro de página)
+5 - Design System
 
-Currently, two official plugins are available:
+- Primeira Página 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1 - Precisa de uma Nav-bar que consiga acessar tanto a pag 1 tanto quanto a pag 2
+2 - Uma foto na Esquerda da pag com um slogan 
+3 - em baixo do slogan um botão que ao dar um click abre uma descrição 
+4 - e por ultimo um botão no fim da pag, que ao dar um click abre um video
 
-## Expanding the ESLint configuration
+- Segunda Página
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Mesma coisa que a API do rick and morty
+Com imagem + 4 Itens descritivos do personagem
