@@ -1,0 +1,76 @@
+.pagina1-container {
+    padding: 1rem;
+    background-color: #000;
+    color: white;
+    text-align: center;
+  }
+  
+  .logo {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  .titulo {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .botao {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .azul {
+    background-color: #2196f3;
+    color: white;
+  }
+  
+  .laranja {
+    background-color: #ff9800;
+    color: black;
+  }
+  
+  .descricao {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+  
+  .video {
+    margin-top: 1rem;
+  }
+  
+  /* 💻 MEDIA QUERY PARA DESKTOP AQ */
+  @media (min-width: 768px) {
+    .pagina1-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 2rem;
+      padding: 2rem;
+      text-align: left;
+    }
+  
+    .logo {
+      max-width: 400px;
+    }
+  
+    .titulo {
+      font-size: 2rem;
+    }
+  
+    .botao {
+      max-width: 200px;
+    }
+  
+    .video iframe {
+      height: 315px;
+    }
+  }
+  
