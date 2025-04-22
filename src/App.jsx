@@ -10,7 +10,7 @@ function App() {
         option01="Início" 
         option02="Seção" 
         option03="Contato" 
-        option04="Cálculos" 
+        option04="API DragonBall" 
         option05="Personagens"
       />
       <Routes>

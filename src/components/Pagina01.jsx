@@ -20,7 +20,7 @@ function Pagina01() {
       </button>
       {showVideo && (
         <div className="video">
-          <iframe width="100%" height="200" src="https://www.youtube.com/embed/dCq8OCap5zM" title="Vídeo do Dragon Ball" frameBorder="0" allowFullScreen></iframe>
+          <iframe width="100%" height="200" src="https://youtu.be/YUDbl9qBihk?si=kOSj5_1M1xlnh5ef" title="Vídeo do Dragon Ball" frameBorder="0" allowFullScreen></iframe>
         </div>
       )}
     </div>
