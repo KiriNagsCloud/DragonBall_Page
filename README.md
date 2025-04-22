@@ -1,5 +1,3 @@
-# React + Vite
-
 # ExFixacaoAPI
 1 - Mobile first
 2 - 2 Paths(Página)
@@ -18,3 +16,5 @@
 
 Mesma coisa que a API do rick and morty
 Com imagem + 4 Itens descritivos do personagem
+
+# React + Vite
