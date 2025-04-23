@@ -1,30 +1,50 @@
-import { useState } from 'react';
-import './Pagina01.css'; // Arquivo CSS separado para a página
+import React, { useState } from "react";
+import "./Pagina01.css";
 
-function Pagina01() {
+export default function Pagina01() {
   const [showDescription, setShowDescription] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
 
   return (
     <div className="pagina1-container">
-      <img src="https://upload.wikimedia.org/wikipedia/pt/0/01/Dragon_Ball_Z_Logo.png" alt="Dragon Ball" className="logo" />
-      <h2 className="titulo">Bem-vindo ao universo Dragon Ball!</h2>
-      
-      <button className="botao azul" onClick={() => setShowDescription(!showDescription)}>
-        {showDescription ? 'Esconder Descrição' : 'Mostrar Descrição'}
-      </button>
-      {showDescription && <p className="descricao">Dragon Ball é um anime incrível cheio de ação, aventura e personagens icônicos!</p>}
+      <div className="imagem-slogan">
+        <img
+          src="https://freepngimg.com/thumb/dragon_ball/23374-9-dragon-ball-logo-file.png"
+          alt="Logo Dragon Ball"
+          className="imagem"
+        />
+        <h2 className="slogan">"Supere seus limites e vá além!"</h2>
 
-      <button className="botao laranja" onClick={() => setShowVideo(!showVideo)}>
-        {showVideo ? 'Esconder Vídeo' : 'Mostrar Vídeo'}
+        <button
+          className="botao"
+          onClick={() => setShowDescription(!showDescription)}
+        >
+          Ver Descrição
+        </button>
+        {showDescription && (
+          <p className="descricao">
+            Dragon Ball é uma jornada de força, amizade e superação. Seja você também um guerreiro Z!
+          </p>
+        )}
+      </div>
+
+      <button className="botao-video" onClick={() => setShowVideo(!showVideo)}>
+        {showVideo ? "Fechar Vídeo" : "Ver Vídeo"}
       </button>
+
       {showVideo && (
-        <div className="video">
-          <iframe width="100%" height="200" src="https://youtu.be/YUDbl9qBihk?si=kOSj5_1M1xlnh5ef" title="Vídeo do Dragon Ball" frameBorder="0" allowFullScreen></iframe>
+        <div className="video-container">
+          <iframe
+            width="100%"
+            height="315"
+            src="https://www.youtube.com/embed/SiMHTK15Pik"
+            title="Trailer Dragon Ball"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       )}
     </div>
   );
 }
-
-export default Pagina01;

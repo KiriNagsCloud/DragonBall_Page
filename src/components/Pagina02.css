@@ -1,63 +1,43 @@
 .pagina2-container {
-    padding: 1rem;
-    background-color: #111;
-    color: white;
-  }
-  
-  .titulo {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Grid mobile first: 1 por linha */
-  .personagens-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-  
-  .card {
-    background-color: #222;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(255, 165, 0, 0.3);
-    transition: transform 0.2s ease;
-  }
-  
-  .card:hover {
-    transform: scale(1.02);
-  }
-  
-  .card-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
-  
-  .card-info {
-    padding: 1rem;
-  }
-  
-  .card-title {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* 💻 Media Query: grid com 2 ou 3 colunas para telas maiores */
-  @media (min-width: 600px) {
-    .personagens-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (min-width: 900px) {
-    .personagens-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  
-    .titulo {
-      font-size: 2rem;
-    }
-  }
-  
+  padding: 2rem;
+  text-align: center;
+}
+
+.botoes-paginacao {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.botoes-paginacao button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.personagens-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card h3 {
+  margin: 0.5rem 0;
+}

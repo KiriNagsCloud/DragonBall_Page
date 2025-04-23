@@ -1,40 +1,61 @@
-// src/components/req.jsx
-import React, { useEffect, useState } from 'react';
-import styles from './req.module.css';
+import React, { useEffect, useState } from "react";
+import styles from "./Req.module.css";
 
-function Req() {
-  const [characters, setCharacters] = useState([]);
-  const [loading, setLoading] = useState(true);
+export default function Req() {
+  const [personagens, setPersonagens] = useState([]);
+  const [pagina, setPagina] = useState(1);
 
   useEffect(() => {
-    fetch('https://dragonball-api.com/api/characters')
+    fetch(`https://dragonball-api.com/api/characters?page=${pagina}`)
       .then((res) => res.json())
       .then((data) => {
-        setCharacters(data.items);
-        setLoading(false);
+        setPersonagens(data.items || []);
       })
-      .catch((err) => {
-        console.error('Erro ao buscar personagens:', err);
-        setLoading(false);
-      });
-  }, []);
-
-  if (loading) return <p className={styles.loading}>Carregando personagens...</p>;
+      .catch((err) => console.error("Erro ao buscar personagens:", err));
+  }, [pagina]);
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.title}>Personagens de Dragon Ball</h2>
-      <ul className={styles.characterList}>
-        {characters.slice(0, 10).map((char) => (
-          <li key={char.id} className={styles.characterItem}>
-            <strong>{char.name}</strong> - {char.race}
-            <br />
-            <img src={char.image} alt={char.name} className={styles.characterImage} />
-          </li>
-        ))}
-      </ul>
+      <h2>Personagens Dragon Ball</h2>
+
+      {/* Botões de navegação */}
+      <div className={styles.navegacao}>
+        <button
+          className="btn btn-outline-primary me-2"
+          onClick={() => setPagina((prev) => Math.max(1, prev - 1))}
+        >
+          Página anterior
+        </button>
+        <span>Página {pagina}</span>
+        <button
+          className="btn btn-outline-primary ms-2"
+          onClick={() => setPagina((prev) => prev + 1)}
+        >
+          Próxima página
+        </button>
+      </div>
+
+      {/* Renderização Condicional */}
+      {personagens.length > 0 ? (
+        <div className={styles.grid}>
+          {personagens.map((personagem) => (
+            <div key={personagem.id} className={styles.card}>
+              <img
+                src={personagem.image}
+                alt={personagem.name}
+                className={styles.imagem}
+              />
+              <h4>{personagem.name}</h4>
+              <p><strong>Ki:</strong> {personagem.ki}</p>
+              <p><strong>Raça:</strong> {personagem.race}</p>
+              <p><strong>Universo:</strong> {personagem.universe}</p>
+              <p><strong>Gênero:</strong> {personagem.gender}</p>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <p>Nenhum personagem encontrado.</p>
+      )}
     </div>
   );
 }
-
-export default Req;

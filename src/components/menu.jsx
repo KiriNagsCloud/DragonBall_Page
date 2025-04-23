@@ -1,50 +1,34 @@
-import style from './menu.module.css';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import styles from "./menu.module.css";
 
-export const Menu = (props) => {
+export default function Menu() {
   return (
-    <nav className={`navbar navbar-expand-lg navbar-dark bg-dark ${style.navBar}`}>
+    <nav className={styles.nav}>
+      <h1 className={styles.logo}>Dragon Ball Page</h1>
+      <ul className={styles.menu}>
+        <li><Link to="/">Início</Link></li>
+        <li><Link to="/personagens">Personagens</Link></li>
+      </ul>
+    </nav>
+  );
+}
+
+{(
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-3">
       <div className="container-fluid">
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-
-        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div className="navbar-nav">
-            <Link className="nav-link" to="/">{props.option01}</Link>
-            <a className="nav-link" href="#s2">{props.option02}</a> {/* ainda é âncora, se quiser mudar me avisa */}
-            <div className="navbar-nav">
-  <Link className="nav-link" to="/">{props.option01}</Link>
-  <a className="nav-link" href="#s2">{props.option02}</a>
-  <Link className="nav-link" to="/contact">{props.option03}</Link>
-  
-  {/* Link externo para o site da API */}
-  <a
-    className="nav-link"
-    href="https://dragonball-api.com"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    {props.option04}
-  </a>
-
-  <Link className="nav-link" to="/requisicao">{props.option05}</Link>
-</div>
-
-            <Link className="nav-link" to="/contact">{props.option03}</Link>
-            <Link className="nav-link" to="/dragonball">{props.option04}</Link>
-            <Link className="nav-link" to="/requisicao">{props.option05}</Link>
-          </div>
+        <Link className="navbar-brand" to="/">Dragon Ball Page</Link>
+        <div className="collapse navbar-collapse">
+          <ul className="navbar-nav me-auto">
+            <li className="nav-item">
+              <Link className="nav-link" to="/">Página 1</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/pagina2">Página 2</Link>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
   );
-};
+}
