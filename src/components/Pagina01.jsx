@@ -13,7 +13,7 @@ export default function Pagina01() {
           alt="Logo Dragon Ball"
           className="imagem"
         />
-        <h2 className="slogan">"Supere seus limites e vá além!"</h2>
+        <h2 className="slogan">Supere seus limites e vá além!</h2>
 
         <button
           className="botao"
@@ -23,7 +23,7 @@ export default function Pagina01() {
         </button>
         {showDescription && (
           <p className="descricao">
-            Dragon Ball é uma jornada de força, amizade e superação. Seja você também um guerreiro Z!
+            Dragon Ball Z é uma série de anime japonesa que acompanha as aventuras do protagonista Goku, que, junto com seus companheiros, defende a Terra contra uma variedade de vilões, que vão desde lutadores e conquistadores espaciais intergalácticos, até androides poderosos e criaturas quase indestrutíveis. Dragon Ball Z é a sequência do anime Dragon Ball e adapta os últimos 325 capítulos dos 519 capítulos originais do mangá Dragon Ball, criado por Akira Toriyama, que foram publicados de 1988 a 1995 na Weekly Shōnen Jump.
           </p>
         )}
       </div>
