@@ -37,7 +37,7 @@ export default function Pagina01() {
           <iframe
             width="100%"
             height="315"
-            src="https://www.youtube.com/embed/SiMHTK15Pik"
+            src="https://www.youtube.com/embed/uA3XCB3atxY"
             title="Trailer Dragon Ball"
             frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
