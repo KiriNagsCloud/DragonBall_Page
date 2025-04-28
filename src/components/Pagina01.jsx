@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Pagina01.css";
 
-export default function Pagina01() {
+export default function Pagina01() { /* Inicio do site */
   const [showDescription, setShowDescription] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
 
@@ -22,7 +22,7 @@ export default function Pagina01() {
           Ver Descrição
         </button>
         {showDescription && (
-          <p className="descricao">
+          <p className="descricao"> 
             Dragon Ball Z é uma série de anime japonesa que acompanha as aventuras do protagonista Goku, que, junto com seus companheiros, defende a Terra contra uma variedade de vilões, que vão desde lutadores e conquistadores espaciais intergalácticos, até androides poderosos e criaturas quase indestrutíveis. Dragon Ball Z é a sequência do anime Dragon Ball e adapta os últimos 325 capítulos dos 519 capítulos originais do mangá Dragon Ball, criado por Akira Toriyama, que foram publicados de 1988 a 1995 na Weekly Shōnen Jump.
           </p>
         )}
@@ -32,7 +32,7 @@ export default function Pagina01() {
         {showVideo ? "Fechar Vídeo" : "Ver Vídeo"}
       </button>
 
-      {showVideo && (
+      {showVideo && ( /* É MAIS DE 8MIIIIL */
         <div className="video-container">
           <iframe
             width="100%"
